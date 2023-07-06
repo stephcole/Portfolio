@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Stephanie Coleman</title>
+        <link rel="stylesheet" type="text/css" href="./real_css_file.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <br>
+            <a href="#About">About</a>
+            <br>
+            <a href="#GitHub">GitHub</a>
+            <br>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks to add space-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Crashing_Waves">
+                <source src="waves_2.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+       <!--If you want to put a video or video text this is where--> 
+       <div class="Video_Text">
+        <h1 class="white-text">Steph's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>The World is Waiting</q>
+                <br>
+                <br> My name is Stephanie. Welcome to my portfolio website. On it I will tell you about my background and experience.
+                <br>
+                <br> Thank you for stopping by!
+            </p>
+        </strong>
+       </div>
+
+       <!--About Section-->
+       <div class="Row" id="About">
+        <!--Left Column-->
+        <div class="Column_1 Column-background">
+            <h1>About</h1>
+            <p>
+                Hi there!
+            <br>
+            <br>I'm a software developer who loves to code. Being able to explore my love for coding with my love for traveling is my mission.
+            <br>
+            <br>If you're in need for a full-stack developer, I'd love to work with you! <a href="#Contact">Contact</a> me below!
+        ``</p>
+        </div>
+        <!--right column-->
+        <div class="Column_2">
+            <!--Insert image you would like-->
+            <img src="./Images/Laptop_work_image.jpg" alt="">
+        </div>
+       </div>
+
+       <!--Github Section-->
+       <div class="row" id="GitHub">
+        <!--left column-->
+        <div class="Column_2">
+            <a href="" target="_blank"><img src="./Images/github_image.jpg" alt="GitHub Logo"></a>
+        </div>
+        <!--right column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my cooding projects on my GitHub profile here!
+                <br>
+                <p class="center"><a href="https://github.com/the-tech-academy" targer="_blank">The Tech Academy Github</a></p>
+            </p>
+        </div>
+       </div>
+
+       <!--COntact section-->
+       <div class="Row" id="Contact">
+        <!--contact form, left column-->
+        <div class="Column_1 Column_tall">
+            <h1>Contact</h1>
+            <!--this specifies where and how to send the form data. Leave blank.-->
+            <form action="" method="POST"><!--insert your formspree endpoint in the action attribute-->
+            <label>Name</label>
+                <input type="text" placeholder="Please enter your name here">
+            <label>Email</label>
+                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+            <label>Message:</label>
+                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                <input type="submt" value="SUBMIT">
+            </form>
+        </div>
+        <!--Contact image, right column-->
+        <div class="Column_2 Column_tall">
+            <img src="./Images/mailbox.jpg" alt="Contact_Image">
+        </div>
+        </div>
+
+        <br>
+        <br>
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Made By Steph.
+                    <br>
+                    <br>
+                     <a href="https://www.learncodinganywhere.com/" target="_blank"> The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
