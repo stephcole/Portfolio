@@ -1,4 +1,9 @@
 /***General Styling***/
+
+/*affects entire document*/
+html{
+  scroll-behavior: smooth;
+}
 /*Body*/
 body {
     margin: 0%  /*This ensures our site displays all the way to the edge of the browser screen */
@@ -62,7 +67,7 @@ a{
 
 /*quotation elements*/
 q {
-    font-style:italic; 
+    font-style:italic; /*make quites italicized*/
 }
 
 /*image elements*/
@@ -409,4 +414,104 @@ form {
   
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /*contact form styling*/
+  /*button used to open contact form. fixed at bottom of page*/
+  .Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 15vw;
+    width: 25vw;
+    background-color: rgb(196, 234, 247);
+    color: plum;
+    text-transform: lowercase, bold; /* Trying lowercase for all h1 headings */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+  }
+
+  /*move popup animations moves the button from off the right side of the screen to its fixeed location*/
+  @keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 15vw;}
+  }
+
+  @-webkit-keyframes movePopup {
+    from {right: -40vw;}
+    to {right: 15vw;}
+  }
+
+  /*Styling for the contact form*/
+  .form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+  }
+
+  .form-container {
+    max-width: 49vw;
+    padding: 1vw;
+    background-color: rgb(196, 234, 247);
+  }
+
+  /* input fields*/
+  .form-container input[typ=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background-color: white;
+    font-size: 1 vw;
+  }
+  button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+  }
+
+  /*hover effect for contact and submit buttons*/
+  button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: plum;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: grey;
+  }
+
+  /*sumbit buttton*/
+  .form-container .btn {
+    background-color: rgb(238, 235, 235);
+    color: midnightblue;
+    border-color: darkgrey;
+    margin-bottom: 1vh;
+  }
+
+  /*close button*/
+  .form-container .cancel {
+    background-color: rgb(238, 235, 235);
+    color: midnightblue;
+    border-color: darkgrey;
+  }
+
+  .form-container .cancel:hover {
+    color: white;
+    background-color: plum;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: grey;
   }

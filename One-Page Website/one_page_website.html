@@ -89,10 +89,14 @@
        <!--COntact section-->
        <div class="Row" id="Contact">
         <!--contact form, left column-->
+        <button onclick="openForm()" class="Pop_Up_Button">Get in touch!</button>
+        <div class="form-popup" id="myForm">
+
         <div class="Column_1 Column_tall">
             <h1>Contact</h1>
             <!--this specifies where and how to send the form data. Leave blank.-->
-            <form action="" method="POST"><!--insert your formspree endpoint in the action attribute-->
+            <form action="https:formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+              <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
             <label>Name</label>
                 <input type="text" placeholder="Please enter your name here">
             <label>Email</label>
@@ -100,13 +104,18 @@
             <label>Message:</label>
                 <input type="text" id="Message" name="Message" placeholder="Please write your message here">
                 <input type="submt" value="SUBMIT">
+
+              <button type="submit" class="btn">SUBMIT</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
             </form>
         </div>
         <!--Contact image, right column-->
         <div class="Column_2 Column_tall">
-            <img src="./Images/mailbox.jpg" alt="Contact_Image">
+            <img src="./Images/mailbox2.jpg" alt="Contact_Image">
+        
+          </div>
         </div>
-        </div>
+      </div>
 
         <br>
         <br>
