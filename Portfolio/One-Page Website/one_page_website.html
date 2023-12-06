@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Stephanie Coleman</title>
+        <link rel="stylesheet" type="text/css" href="CSS/one_page_website.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <br>
+            <a href="#About">About</a>
+            <br>
+            <a href="#GitHub">GitHub</a>
+            <br>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks to add space-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Crashing_Waves">
+                <source src="waves_2.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+       <!--If you want to put a video or video text this is where--> 
+       <div class="Video_Text">
+        <h1 class="white-text">Steph's Portfolio</h1>
+        <strong>
+            <p class="center">
+                <q>The World is Waiting</q>
+                <br>
+                <br> My name is Stephanie. Welcome to my portfolio website. On it I will tell you about my background and experience.
+                <br>
+                <br> Thank you for stopping by!
+            </p>
+        </strong>
+       </div>
+
+       <!--About Section-->
+       <div class="Row" id="About">
+        <!--Left Column-->
+        <div class="Column_1 Column-background">
+            <h1>About</h1>
+            <p>
+                Hi there!
+            <br>
+            <br>I'm a software developer who loves to code. Being able to explore my love for coding with my love for traveling is my mission.
+            <br>
+            <br>If you're in need for a full-stack developer, I'd love to work with you! <a href="#Contact">Contact</a> me below!
+        ``</p>
+        </div>
+        <!--right column-->
+        <div class="Column_2">
+            <!--Insert image you would like-->
+            <img src="./Images/Laptop_work_image.jpg" alt="">
+        </div>
+       </div>
+
+       <!--Github Section-->
+       <div class="row" id="GitHub">
+        <!--left column-->
+        <div class="Column_2">
+            <a href="" target="_blank"><img src="./Images/github_image.jpg" alt="GitHub Logo"></a>
+        </div>
+        <!--right column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my cooding projects on my GitHub profile here!
+                <br>
+                <p class="center"><a href="https://github.com/stephcole" targer="_blank">My Github</a></p>
+            </p>
+        </div>
+       </div>
+
+       <!--COntact section-->
+       <div class="Row" id="Contact">
+        <!--contact form, left column-->
+        <button onclick="openForm()" class="Pop_Up_Button">Get in touch!</button>
+        <div class="form-popup" id="myForm">
+
+        <div class="Column_1 Column_tall">
+            <h1>Contact</h1>
+            <!--this specifies where and how to send the form data. Leave blank.-->
+            <form action="https:formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+              <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+            <label>Name</label>
+                <input type="text" placeholder="Please enter your name here">
+            <label>Email</label>
+                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+            <label>Message:</label>
+                <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                
+
+              <button type="submit" class="btn">SUBMIT</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+        <!--Contact image, right column-->
+        <div class="Column_2 Column_tall">
+            <img src="./Images/mailbox2.jpg" alt="Contact_Image">
+        
+          </div>
+        </div>
+      </div>
+
+        <br>
+        <br>
+
+        <!-- Images used to open the lightbox -->
+        <!-- temporarily hide light box
+<div class="row">
+    <div class="column">
+      <img src="Images/bolivia.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="Images/cambodia.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="Images/paris.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="Images/petra.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+  </div>
+  ---------------------->
+  
+  <!-- The Modal/Lightbox -->
+  <!--- temporarily hide light box
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="Images/bolivia_big.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="Images/cambodia_big.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="Images/paris_big.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="Images/petra_big.jpg" style="width:100%">
+      </div>
+  ---------------------------->
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <!--- temporarily hide light box
+      <div class="column">
+        <img class="demo" src="Images/bolivia.jpg" onclick="currentSlide(1)" alt="Bolivia">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="Images/cambodia.jpg" onclick="currentSlide(2)" alt="Cambodia">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="Images/paris.jpg" onclick="currentSlide(3)" alt="Paris">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="Images/petra.jpg" onclick="currentSlide(4)" alt="Petra">
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+    <script src="JS/one_page_website.js"></script>
+    ------------------------>
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Made By Steph.
+                    <br>
+                    <br>
+                     <a href="https://www.learncodinganywhere.com/" target="_blank"> The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
